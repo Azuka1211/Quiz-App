@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>selector: querySelectorall</h1>
+    <h2>this is another content for the pables</h2>
+    <h2>this is another content for the pables</h2>
+    <h2>this is another content for the pables</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis deserunt magnam similique explicabo
+        necessitatibus autem aliquid dolore cum, quod possimus magni harum culpa in labore laborum quia exercitationem
+        ab veritatis.
+    </p>
+
+    <script>
+        // selector in javascript based on getelementbytagname
+
+        var myHeading = document.querySelectorAll('h2');
+        console.log(myHeading);
+
+        myHeading.forEach(function (heading) {
+            heading.style.backgroundColor = 'blue';
+        });
+
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

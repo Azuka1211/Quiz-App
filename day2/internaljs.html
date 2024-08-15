@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #warning{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Internal Javascript</h1>
+
+    <div>
+        <p>
+            this is Internal javascript <spann id="warning">pleasw don't click on the link</span>
+        </p>
+    </div>
+
+    <script type="text/Javascript">
+        let message = document.getElementById('warning');
+        message.addEventListener('click', ()=>{
+            alert("I said don't click on me, be warned!!!!")
+        });
+    </script>
+</body>
+</html>

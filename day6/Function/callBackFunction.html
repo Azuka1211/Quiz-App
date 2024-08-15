@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>call back function in javascript</h1>
+
+    <script>
+        const firstName = 'Akeem';
+        const lastName = 'Omotola'
+
+        function personalInfo() {
+            console.log(`Mr ${firstName} celebrates with ${lastName}, congratulations to Mrs ${lastName}`);
+
+        }
+
+        function bioInformation(dateOfCelebration) {
+            console.log(`${lastName} celebrated on ${dateOfCelebration}`);
+        }
+
+        personalInfo()
+        bioInformation('23rd of July,2024');
+    </script>
+</body>
+</html>

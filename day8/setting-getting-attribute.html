@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>setting and getting attributes</h1>
+
+    <script>
+        // syntax: for setting and getting attributes
+        // element.setAttribute('attributeName', 'attributevalue');
+
+        //setting attributes
+        let myAttributes = document.querySelector('h1');
+        myAttributes.setAttribute('id', 'heading-text');
+        console.log(myAttributes);
+
+        let attributeValue = myAttributes.getAttribute('id');
+        console.log(attributeValue);
+    </script>
+</body>
+</html>

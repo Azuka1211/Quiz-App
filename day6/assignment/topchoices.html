@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>topchoices</h1>
+
+    <script>
+        // Create an array to hold your top choices
+let topChoices = ["blue", "green", "red", "yellow"];
+
+// Function to get the suffix for a number
+function mySuffix(number) {
+    let suffix = "";
+    if (number === 1) {
+        suffix = "st";
+    } else if (number === 2) {
+        suffix = "nd";
+    } else if (number === 3) {
+        suffix = "rd";
+    } else {
+        suffix = "th";
+    }
+    return suffix;
+}
+
+// Log each choice to the screen
+for (let i = 0; i < topChoices.length; i++) {
+    let rank = i + 1;
+    console.log(`My ${rank}${mySuffix(rank)} choice is ${topChoices[i]}.`);
+}
+    </script>
+</body>
+</html>

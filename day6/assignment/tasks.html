@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <button onclick="addTask()">Add Task</button>
+    <button onclick="displayTasks()">Display Tasks</button>
+    <button onclick="markTaskCompleted()">Mark Task as Completed</button>
+    <button onclick="deleteTask()">Delete Task</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        let tasks = [];
+
+        function addTask() {
+            let task = prompt("Enter a new task:");
+            if (task) {
+                tasks.push({ task: task, completed: false });
+                alert("Task added successfully!");
+            }
+        }
+
+        function displayTasks() {
+            let taskList = document.getElementById("taskList");
+            taskList.innerHTML = "";
+            tasks.forEach((task, rank) => {
+                let taskItem = document.createElement("li");
+                taskItem.textContent = `${rank + 1}. ${task.task} - ${task.completed ? "Completed" : "Incomplete"}`;
+                taskList.appendChild(taskItem);
+            });
+        }
+
+        function markTaskCompleted() {
+            let taskIndex = prompt("Enter the task number to mark as completed:");
+            taskIndex = parseInt(taskIndex) - 1;
+            if (taskIndex >= 0 && taskIndex < tasks.length) {
+                tasks[taskIndex].completed = true;
+                alert("Task marked as completed!");
+            } else {
+                alert("Invalid task number!");
+            }
+        }
+
+        function deleteTask() {
+            let taskIndex = prompt("Enter the task number to delete:");
+            taskIndex = parseInt(taskIndex) - 1;
+            if (taskIndex >= 0 && taskIndex < tasks.length) {
+                tasks.splice(taskIndex, 1);
+                alert("Task deleted successfully!");
+            } else {
+                alert("Invalid task number!");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>selector: getelementbyclassname</h1>
+
+    <h2 class="ayothenoisemaker">Hello</h2>
+
+    <h2 class="ayothenoisemaker">the is another warning to ayo to stop making noise</h2>
+
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio eligendi ducimus atque libero neque, quo ad
+        maiores exercitationem, amet tenetur voluptatum adipisci sunt, voluptate corporis a nostrum consectetur veniam!
+        Itaque.
+    </p>
+
+    <script>
+        var heading = document.getElementsByClassName('ayothenoisemaker');
+        console.log(heading);
+
+        heading[1].style.color = 'red';
+    </script>
+</body>
+
+</html>
